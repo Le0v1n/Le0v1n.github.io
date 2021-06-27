@@ -40,13 +40,13 @@ Now I have created a `.md` file that contains `space`, and I hope it works.
 
 Let's start it.
 
-![image-20210627140938398](file://F:\GitHub\Le0v1n.github.io\A%20New%20Test%20File.assets\image-20210627140938398.png?lastModify=1624774973)
+![image-20210627140938398](images\image-20210627140938398.png?lastModify=1624774973)
 
 Okay, It is a fail trying, but fortunately I find out the rule about relative path.
 
 Now, I change the path of every pic in md, it is in following.
 
-![image-20210627141650996](file://F:\GitHub\Le0v1n.github.io\images\image-20210627141650996.png?lastModify=1624774973)
+![image-20210627141650996](images\image-20210627141650996.png?lastModify=1624774973)
 
 Yeah, as you see. The Typora will create a folder named "images" and store the pics into it when the pics are used.
 
