@@ -27,11 +27,11 @@
 
 1. 回归问题
 
-   <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526160008212.png" alt="image-20210526160008212" style="zoom:50%;" />
+   <img src="images/image-20210526160008212.png" alt="image-20210526160008212" style="zoom:50%;" />
 
 2. 分类问题
 
-   <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526160117645.png" alt="image-20210526160117645" style="zoom:50%;" />
+   <img src="images/image-20210526160117645.png" alt="image-20210526160117645" style="zoom:50%;" />
 
 ## b. 无监督学习
 
@@ -39,7 +39,7 @@
 
 监督学习和无监督学习的区别
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526160249048.png" alt="image-20210526160249048" style="zoom:50%;" />
+<img src="images/image-20210526160249048.png" alt="image-20210526160249048" style="zoom:50%;" />
 
 使⽤⽆监督学习实现分类的算法⼜叫作**聚类**
 
@@ -51,7 +51,7 @@
 
 假如我们在一个有大量深度学习相关文章的网站检索"深度学习"，就会显示很多带有"深度学习"关键字的相关网页，但是只要仔细观察就会发现，这些网页被大致分为几个主要的类别，比如关于深度学习的理论、算法、硬件、新闻等。其实这就是一个聚类应用，可以将这个网站中的检索工具看作一个已经训练好的无监督学习模型，在我们对检索工具输入指令后，它就会按照我们的要求将所有的页面搜索出来，但最后呈现在我们眼前的不会是乱糟糟的一堆链接，而是完成聚类后的几大类网址的主链接，这也极大提升了用户体验。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526160620628.png" alt="image-20210526160620628" style="zoom: 67%;" />
+<img src="images/image-20210526160620628.png" alt="image-20210526160620628" style="zoom: 67%;" />
 
 ## c. 区别
 
@@ -71,7 +71,7 @@
 
 ## a. 欠拟合
 
-![image-20210526161748479](深度学习之PyTorch实战计算机视觉.assets/image-20210526161748479.png)
+![image-20210526161748479](images/image-20210526161748479.png)
 
 <font size=5>在解决欠拟合问题时，主要从以下三方面着手:</font>
 
@@ -81,7 +81,7 @@
 
 ## b. 过拟合
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526162332520.png" alt="image-20210526162332520" style="zoom: 67%;" />
+<img src="images/image-20210526162332520.png" alt="image-20210526162332520" style="zoom: 67%;" />
 
 （a）所示的仍然是之前已获得的房屋的大小和价格的关系数据，（b）所示的是一个过拟合的模型，可以看到这个模型过度捕获了原数据的特征。不仅同之前的欠拟合模型存在同样的问题，而且**过拟合模型受原数据中的噪声数据影响非常严重**。（c）所示，**如果噪声数据严重偏离既定的数据轨道，则拟合出来的模型会发生很大改变**，这个影响是灾难性的。
 
@@ -101,7 +101,7 @@
 
 首先来看一个模型结构相对简单的实例，在这个实例中我们定义模型的前向传播的计算函数为$f = (x + y) \times z$，它的流程如图下图所示:
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526163924621.png" alt="image-20210526163924621" style="zoom:67%;" />
+<img src="images/image-20210526163924621.png" alt="image-20210526163924621" style="zoom:67%;" />
 
 假设输入数据$x=2、y=5、z=3$，则可以得到前向传播的计算结果$f=(x+y) \times z=21$，如果把原函数改写成复合函数的形式，$h=x+y=7$，就可以得到$f=h\times z =21$。
 
@@ -115,7 +115,7 @@
 
 在清楚后向传播的大致计算流程和思路后，我们再来看一个模型结构相对复杂的实例，其结构是一个初级神经网络，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526165353579.png" alt="image-20210526165353579" style="zoom:67%;" />
+<img src="images/image-20210526165353579.png" alt="image-20210526165353579" style="zoom:67%;" />
 
 我们假设 $x_0=1, x_1=1, b=-1$, 同时存在相对应的权重值 $w_0=0.5, w_1=0.5$ ，使用Sigmoid作为该神经网络的激活函数，就可以得到前向传播的函数为$\large f=\frac{1}{1+e^-(w_0x_0+w_1x_1+b)}$，将相应的参数代入函数中进行计算，得到计算函数为，$\large f=\frac{1}{1+e^0}=0.5$, 之后再对函数进行求导。同样，可以将原函数进行简化，改写成复合函数的形式求解，令$\large h=w_0x_0+w_1x_1+b=0$，简化后的函数为$\large f(h)=\frac{1}{1+e^-h}=0.5$，在分别计算后得到$\large \frac{\partial h}{\partial x_0}=w_0=0.5$, $\large \frac{\partial h}{\partial x_1}=w_1=0.5$, 有了以上结果后，下面来看$x_0, \ x_1$的后向传播微调值。
 
@@ -262,7 +262,7 @@ $$
 
 同时，在神经网络模型中加入偏置 （$Bias$），偏置可以让我们搭建的神经网络模型偏离原点，而**没有偏置的函数必定会经过原点**，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526204434786.png" alt="image-20210526204434786" style="zoom:67%;" />
+<img src="images/image-20210526204434786.png" alt="image-20210526204434786" style="zoom:67%;" />
 
 如图所示，$f(x)=2x$ 是不带偏置的函数，而$g(x)=2x+3$是偏置为3的函数。**模型偏离原点的好处就是能够使模型具有更强的变换能力，在面对不同的数据时拥有更好的泛化能力**。在增加偏置后，我们之前的单层神经网络模型的数学表示如下∶
 $$
@@ -294,13 +294,13 @@ $$
 $$
 根据Sigmoid函数，我们可以得到Sigmoid的几何图形，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526210259035.png" alt="image-20210526210259035" style="zoom:67%;" />
+<img src="images/image-20210526210259035.png" alt="image-20210526210259035" style="zoom:67%;" />
 
 从图中可以看到，输入 Sigmoid激活函数的数据经过激活后输出数据的区间为 $0～1$，**输入数据越大，输出数据越靠近1，反之越靠近0**。 
 
 Sigmoid在一开始被作为激活函数使用时就受到了<u>大众的普遍认可</u>，其主要原因是从输入到经过Sigmoid激活函数激活输出的一系列过程与生物神经网络的工作机理非常相似，不过Sigmoid作为激活函数的缺点也非常明显，**其最大的缺点就是使用==Sigmoid作为激活函数会导致模型的梯度消失==，因为Sigmoid导数的取值区间为0～0.25**，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526210409833.png" alt="image-20210526210409833" style="zoom:67%;" />
+<img src="images/image-20210526210409833.png" alt="image-20210526210409833" style="zoom:67%;" />
 
 根据**复合函数的链式法则**可以知道，如果我们的每层神经网络的输出节点都使用Sigmoid作为激活函数，那么在后向传播的过程中每逆向经过一个节点，就要乘上一个Sigmoid的导数值，而Sigmoid的导数值的取值区间为0～0.25，所以**即便每次乘上Sigmoid的导数值中的最大值0.25，也相当于在后向传播的过程中每逆向经过一个节点，梯度值的大小就会变成原来的四分之一，==如果模型层次达到了—定深度，那么后向传播会导致梯度值越来越小，直到梯度消失==。**
 
@@ -308,11 +308,11 @@ Sigmoid在一开始被作为激活函数使用时就受到了<u>大众的普遍�
 
 > 这是黄全进师兄的讲解:
 >
-> ![备注 2021年5月27日_00](深度学习之PyTorch实战计算机视觉.assets/备注 2021年5月27日_00.png)
+> ![备注 2021年5月27日_00](images/备注 2021年5月27日_00.png)
 >
-> ![备注 2021年5月27日_01](深度学习之PyTorch实战计算机视觉.assets/备注 2021年5月27日_01.png)
+> ![备注 2021年5月27日_01](images/备注 2021年5月27日_01.png)
 >
-> ![备注 2021年5月27日_02](深度学习之PyTorch实战计算机视觉.assets/备注 2021年5月27日_02.png)
+> ![备注 2021年5月27日_02](images/备注 2021年5月27日_02.png)
 
 ### 2. tanh
 
@@ -322,11 +322,11 @@ $$
 $$
 我们根据tanh函数可以得到tanh的几何图形，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526211118224.png" alt="image-20210526211118224" style="zoom:67%;" />
+<img src="images/image-20210526211118224.png" alt="image-20210526211118224" style="zoom:67%;" />
 
 我们从图中可以知道，**tanh函数的输出结果是零中心数据**，所以**解决了激活函数在模型优化过程中收敛速度变慢的问题**, 但 tanh函数的导数取值区间为 $0～1$，仍然不够大(**不大于1都叫不够大**)，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210526211723149.png" alt="image-20210526211723149" style="zoom:67%;" />
+<img src="images/image-20210526211723149.png" alt="image-20210526211723149" style="zoom:67%;" />
 
 所以，因为导数取值范围的关系，在深度神经网络模型的后向传播过程中仍有可能出现梯度消失的情况。
 
@@ -344,7 +344,7 @@ ReLU函数通过判断 0 和输入数据 x 中的最大值作为结果进行输�
 
 其逻辑非常简单，使用**该激活函数的模型在实际计算过程中非常高效**。我们根据ReLU函数，可以得到ReLU的几何图形，如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527095515945.png" alt="image-20210527095515945" style="zoom:67%;" />
+<img src="images/image-20210527095515945.png" alt="image-20210527095515945" style="zoom:67%;" />
 
 **ReLU函数的收敛速度非常快，其计算效率远远高于Sigmoid和tanh**。
 
@@ -464,7 +464,7 @@ Res:
 
 如图所示为单色彩通道的输入图像的卷积过程。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527104056714.png" alt="image-20210527104056714" style="zoom:67%;" />
+<img src="images/image-20210527104056714.png" alt="image-20210527104056714" style="zoom:67%;" />
 
 如图所示，输入的是一张原始图像，中间的是卷积核，图中显示的是卷积核的一次工作过程，通过卷积核的计算输出了一个结果，**其计算方式就是将对应位置的数据相乘然后相加**，如下所示∶
 $$
@@ -472,7 +472,7 @@ $$
 $$
 下面，根据我们定义的卷积核步长对卷积核窗口进行滑动。**卷积核的步长其实就是卷积核窗口每次滑动经过的图像上的像素点数量**，如图所示是一个步长为2的卷积核经过一次滑动后窗口位置发生的变化。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527104358924.png" alt="image-20210527104358924" style="zoom:67%;" />
+<img src="images/image-20210527104358924.png" alt="image-20210527104358924" style="zoom:67%;" />
 
 如果我们仔细观察，则还会发现在<u>上图中输入图像的最外层多了一圈全为0的像素</u>，这其实是一种用于提升卷积效果的边界像素填充方式。**我们在对输入图像进行卷积之前，有两种边界像素填充方式可以选择，分别是Same和Valid**。
 
@@ -502,7 +502,7 @@ $$
 
 我们已经了解了单通道的卷积操作过程，但是在实际应用中一般很少处理色彩通道只有一个的输入图像，所以接下来看看如何对三个色彩通道的输入图像进行卷积操作，三个色彩通道的输入图像的卷积过程如图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527111105601.png" alt="image-20210527111105601" style="zoom:67%;" />
+<img src="images/image-20210527111105601.png" alt="image-20210527111105601" style="zoom:67%;" />
 
 在卷积过程中我们还加入了一个值为 $1$ 的偏置，其实整个计算过程和之前的单通道的卷积过程大同小异，**我们可以将三通道的卷积过程看作三个独立的单通道卷积过程，最后将三个独立的单通道卷积过程的结果进行相加，就得到了最后的输出结果**。
 
@@ -529,7 +529,7 @@ $$
 
 如图所示是一个最大池化层的操作过程。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527111539077.png" alt="image-20210527111539077" style="zoom:67%;" />
+<img src="images/image-20210527111539077.png" alt="image-20210527111539077" style="zoom:67%;" />
 
 如上图所示，池化层也需要<u>定义一个类似卷积层中卷积核的滑动窗口</u>，**但这个滑动窗口仅用来提取特征图中的重要特征，==本身并没有参数==**。这里使用的滑动窗口的高度×宽度是 $2×2$，**滑动窗口的深度和特征图的深度保持一致**。如上图所示是对单层特征图进行的操作，并且滑动窗口的步长为 $2$。
 
@@ -539,7 +539,7 @@ $$
 
 在了解最大池化层的工作方法后，我们再来看另一种常用的池化层方法，如下图所示是一个平均池化层的操作过程。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527111757575.png" alt="image-20210527111757575" style="zoom:67%;" />
+<img src="images/image-20210527111757575.png" alt="image-20210527111757575" style="zoom:67%;" />
 
 平均池化层的窗口、步长和最大池化层没有区别，**但平均池化层最后对窗口框选的数据使用的计算方法与最大池化层不同**。平均池化层在得到窗口中的数字后，将它们全部相加再求平均值，将该值作为最后的输出结果。如果滑动窗口依旧是步长为 $2$ 的 $2×2$ 窗口，则同样刚好将输入图像划分成 4 部分，将每部分的数据相加然后求平均值，并将该值作为该部分的输出结果，最后得到上图中右边的输出图像，即目标特征图。第1个滑动窗口框选的4个数字分别是 $1、1、5、6$，那么最后求得平均值为 $3.25$并将其作为输出结果; 第2个滑动窗口框选的4个数字分别是 $2、4、7、8$，那么最后求得平均值为 $5.25$ 并将其作为输出结果，以此类推，最后得到的结果就是 $3.25、5.25、2、2$。
 
@@ -562,7 +562,7 @@ $$
 
 <font color='red'>**全连接层的主要作用是将输入图像在经过卷积和池化操作后提取的特征进行压缩，并且根据压缩的特征完成模型的分类功能**</font>。如下图所示是一个全连接层的简化流程。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527113232398.png" alt="image-20210527113232398" style="zoom:67%;" />
+<img src="images/image-20210527113232398.png" alt="image-20210527113232398" style="zoom:67%;" />
 
 其实全连接层的计算比卷积层和池化层更简单，如上图所示的输入就是我们通过卷积层和池化层提取的输入图像的核心特征，**与全连接层中定义的权重参数相乘**，最后被压缩成仅有的10个输出参数，这 10个输出参数其实已经是一个分类的结果，再经过激活函数的进一步处理，就能让我们的分类预测结果更明显。将 10个参数输入到 Softmax激活函数中，激活函数的输出结果就是模型预测的输入图像对应各个类别的可能性值。
 
@@ -588,7 +588,7 @@ $$
 
 最初的 LeNet 模型已经不再被人们使用了，被使用最多的是改进版本LeNet-5。LeNet-5作为卷积神经网络模型的先驱，最先被用于处理计算机视觉问题，**在识别手写字体的准确性上取得了非常好的成绩**。如下图所示是LeNet-5卷积神经网络的网络架构。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527113458899.png" alt="image-20210527113458899" style="zoom:67%;" />
+<img src="images/image-20210527113458899.png" alt="image-20210527113458899" style="zoom:67%;" />
 
 > + C == Convolution, 卷积层
 >
@@ -611,7 +611,7 @@ $$
 
 AlexNet模型在比赛中一举获得冠军，而且在识别准确率上比使用支持向量机（Support Vector Machines，简称SVM）这种传统的机器学习方法的第2名有一定的优势。下面让我们来看看这个卷积神经网络模型的网络架构，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527145908344.png" alt="image-20210527145908344" style="zoom:67%;" />
+<img src="images/image-20210527145908344.png" alt="image-20210527145908344" style="zoom:67%;" />
 
 > + $MaxPool_i$层其实就是LeNet-5中的S层(下采样层)
 >   + 我们一般把下采样层叫做池化层
@@ -648,7 +648,7 @@ AlexNet模型在比赛中一举获得冠军，而且在识别准确率上比使�
 
 下面看一个 $16$ 层结构的VGGNet模型(VGGNet-16)，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527151556210.png" alt="image-20210527151556210" style="zoom:67%;" />
+<img src="images/image-20210527151556210.png" alt="image-20210527151556210" style="zoom:67%;" />
 
 在上图中，从上往下分别是 $INPUT$层、$Conv1$层、$Conv2$层、 $MaxPool1$层、$Conv3$层、$Conv4$层、$MaxPool2$层、$Conv5$层、$Conv6$层、$MaxPool3$层、$Conv7$层、$Conv8$层、$Conv9$层、$MaxPool4$层、 $Conv10$层、$Conv11$层、$Conv12$层、$MaxPool5$层、$FC13$层、$FC14$层、$FC15$层和 $OUTPUT$层，一共有 $16$ 层，所以我们将这个模型叫作 $VGG16$，下面我们重点对模型中的前 $7$ 层和后 $8$ 层进行介绍。
 
@@ -678,7 +678,7 @@ AlexNet模型在比赛中一举获得冠军，而且在识别准确率上比使�
 
 因为在GoogleNet模型中重复性比较大，所以我们就不进行逐层介绍了。下面重点看一下模型中的 Inception 单元结构，在此之前先来了解一下Naive Inception单元的结构，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527153750609.png" alt="image-20210527153750609" style="zoom:67%;" />
+<img src="images/image-20210527153750609.png" alt="image-20210527153750609" style="zoom:67%;" />
 
 从上图中可以看出，前一层（Previous Layer）是Naive Inception单元的数据输入层，之后被分成了4个部分，这4个部分分别对应 滑动窗口的高度和宽度为 $1×1$ 的卷积层、 $3×3$ 的卷积层、$5×5$ 的卷积层和 $ 3×3$ 的最大池化层，然后将各层计算的结果汇聚至合并层(Filter Concatenation)，在完成合并后将结果输出。
 
@@ -696,7 +696,7 @@ AlexNet模型在比赛中一举获得冠军，而且在识别准确率上比使�
 
 下面看看GoogleNet模型中的Inception单元结构，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527154200278.png" alt="image-20210527154200278" style="zoom:67%;" />
+<img src="images/image-20210527154200278.png" alt="image-20210527154200278" style="zoom:67%;" />
 
 在对 GoogleNet 中的 Inception 单元的内容进行详细介绍之前，我们先了解一下 NIN(Network in Network)中 $1×1$ 卷积层的意义和作用。
 
@@ -719,13 +719,13 @@ GoogleNet的网络架构从上往下一共有 $22$ 层，层次类型主要包�
 
 GoogleNet模型中的起始部分的结构如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527154610967.png" alt="image-20210527154610967" style="zoom:67%;" />
+<img src="images/image-20210527154610967.png" alt="image-20210527154610967" style="zoom:67%;" />
 
 在上图中，$INPUT$ 是整个GoogleNet模型最开始的数据输入层;  $Conv$ 层对应在模型中使用的卷积层; $MaxPooL$层对应在模型中使用的最大池化层; $Local Response Normalization$ 是在模型中使用的局部响应归一化层。**每个层后面的数字表示滑动窗口的高度和宽度及步长**，比如第 $1$ 个卷积层中的数字是 $7\times7+1(S)$，$7×7$ 就是滑动窗口的高度和宽度, $1$ 就是滑动窗口的步长。大写的 $S$ 是 $Stride$ 的缩写，这个起始部分的输出结果作为Inception单元堆叠部分的输入。
 
 在GoogleNet模型中最后分类输出部分的结构如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527154758260.png" alt="image-20210527154758260" style="zoom:67%;" />
+<img src="images/image-20210527154758260.png" alt="image-20210527154758260" style="zoom:67%;" />
 
 在上图中，最后分类输出部分的输入数据来自 Inception单元堆叠部分最后一个Inception单元的合并输出，AveragePool层对应模型中的平均池化层，FC层对应模型中的全连接层， Softmax对应模型最后进行分类使用的Softmax激活函数。
 
@@ -741,11 +741,11 @@ GoogleNet模型中的起始部分的结构如下图所示。
 
 之前讲到过。==在搭建卷积神经网络模型时如果只是一味地对模型的深度进行机械式累加， 则最后得到的模型会出现梯度消失、极易过拟合等模型性能退化的问题==。在 ResNet模型中大量使用了—些相同的模块来搭建深度更深的网络，最后得到的模型在性能上却有不俗的表现，**其中一个非常关键的因素就是模型累加的模块并非简单的单输入单输出的结构，而是一种设置了附加关系的新结构，这个附加关系就是恒等映射（Identity Mapping），这个新结构也是我们要重点介绍的残差网络结构**。如下图所示是**没有**设置附加关系的单输入单输出模块。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527155023257.png" alt="image-20210527155023257" style="zoom:67%;" />
+<img src="images/image-20210527155023257.png" alt="image-20210527155023257" style="zoom:67%;" />
 
 上图显示了该模块的工作流程，输入数据 $X$ 在通过两个卷积层后得到输出结果 $H(X)$。在ResNet模型中设置附加的恒等映射关系的残差网络结构如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527155057059.png" alt="image-20210527155057059" style="zoom:67%;" />
+<img src="images/image-20210527155057059.png" alt="image-20210527155057059" style="zoom:67%;" />
 
 如上图所示的结构和之前的单输入单输出结构相比并没有太大的变化，唯一的不同是残差模块的**最终输出结果等于输入数据$X$ 经过两个卷积之后的输出 $F(X)$**加上输入数据的恒等映射。
 
@@ -760,7 +760,7 @@ GoogleNet模型中的起始部分的结构如下图所示。
 
 近几年，ResNet的研究者还提出了能够让网络结构更深的残差模块，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210527155219196.png" alt="image-20210527155219196" style="zoom:67%;" />
+<img src="images/image-20210527155219196.png" alt="image-20210527155219196" style="zoom:67%;" />
 
 其在之前的残差模块的基础上引入了NIN(Network in Network)，**使用 $1×1$ 的卷积层来减少模型训练的参数量，同时减少整个模型的计算量，使得拓展更深的模型结构成为可能**。于是出现了拥有 $50$ 层、$ 101$层、$152$ 层的ResNet模型，**这不仅没有出现模型性能退化的问题，而且错误率和计算复杂度都保持在很低的程度**。
 
@@ -1267,15 +1267,15 @@ Res:
   >
   > 	```python
   > 	class Student:
-  > 	    																
+  > 	    																	
   > 	    count = 0;
-  > 	    																
+  > 	    																	
   > 	    def __init__(self, name, age):
   > 	        self.name = name;
   > 	        self.age = age;
   > 	        Student.count += 1;
   > 	        print("The times of construction(initialization) is:", Student.count);
-  > 	    																
+  > 	    																	
   > 	    def dis_student(self):
   > 	        print("Student name:", self.name);
   > 	        print("Student age:", self.age);
@@ -1284,7 +1284,7 @@ Res:
   > 	# 实例化
   > 	stu1 = Student("Leovin", "20");
   > 	stu2 = Student("Tom", "12");
-  > 																	
+  > 																		
   > 	stu1.dis_student();
   > 	"""
   > 	Res:
@@ -1294,46 +1294,46 @@ Res:
   > 	    Student age: 20
   > 	"""
   > 	```
-  >																
+  >																	
   > 	​		我们可以看到, 不像`Java`中那样, `self.name = name`只是为了把`__init__()`函数中的形参`name`传给`self`这个容器中, 这样`dis_student(self)`函数就可以使用`self.name`这个参数了!
-  >																
+  >																	
   > 	​		而且`Student`这个类也没有定义`name`成员变量, 单单定义了`count=0`这个成员变量, 而且在使用类成员变量`count`时, 是使用`类名.成员变量名`, 即`Student.count`而不是`this.count`, 这也印证了我们的猜想!
-  >																
+  >																	
   > 	​		需要注意的是, `self`这个容器只能在类中的函数之间使用, 且该函数必须有`self`这个参数! 
-  >																
+  >																	
   > 	例:
-  >																
+  >																	
   > 	```python
   > 	def dis_student(self):
   > 	        print("Student name:", self.name);
   > 	        print("Student age:", self.age);
   > 	```
-  >																
+  >																	
   > 	​		`self`也不能在类中直接使用, 因为类中的函数有`self`, 而类本身没有`self`(道理好比`main`直接使用函数中的形参, 肯定是不可以的)
-  >																
+  >																	
   > 	例:
-  >																
+  >																	
   > 	```python
   > 	class Student:
-  > 	    																
+  > 	    																	
   > 	    count = 0;
-  > 	    																
+  > 	    																	
   > 	    def __init__(self, name, age):
   > 	        self.name = name;
   > 	        self.age = age;
   > 	        Student.count += 1;
   > 	        print("The times of construction(initialization) is:", Student.count);
-  > 	    																
+  > 	    																	
   > 	    def dis_student(self):
   > 	        print("Student name:", self.name);
   > 	        print("Student age:", self.age);
-  > 	       																
+  > 	       																	
   > 	    print("Self.name is:", self.name);
-  > 	    																
+  > 	    																	
   > 	# 实例化
   > 	stu1 = Student("Leovin", "20");
   > 	stu2 = Student("Tom", "12");
-  > 																	
+  > 																		
   > 	stu1.dis_student();
   > 	"""
   > 	Res:
@@ -1345,66 +1345,66 @@ Res:
   > 	          3     count = 0;
   > 	          4 
   > 	          5     def __init__(self, name, age):
-  > 																	
+  > 																		
   > 	    <ipython-input-87-f12d49975b2f> in Student()
   > 	         13         print("Student age:", self.age);
   > 	         14 
   > 	    ---> 15     print("Self.name is:", self.name);
   > 	         16 
   > 	         17 # 实例化
-  > 																	
+  > 																		
   > 	    NameError: name 'self' is not defined
   > 	"""
   > 	```
-  >																
+  >																	
   > 	这样理解对吗?
-  >																
+  >																	
   > 	错误!
-  >																
+  >																	
   > 	-----------
-  >																
+  >																	
   > 	------
-  >																
+  >																	
   > 	<font size=5 color='red'>正确理解</font>:
-  >																
+  >																	
   > 	在类中:
-  >																
+  >																	
   > 	`Class关键字 类名(父类)`
-  >																
+  >																	
   > 	> 在Python中, 类默认继承`object`类 -> `object`是所有类的父类
-  >																
+  >																	
   > 	`self`在类中的理解就是==实例化对象本身==
-  >																
+  >																	
   > 	+ ```python
   > 		class aSample(object):
   > 		    def __init__(self, value):
   > 		        self.value = value;
   > 		```
-  >																
+  >																	
   > 		对于这段代码, `self.value = value`有两层含义:
-  >																
+  >																	
   > 		1. 给self创建了一个新的属性, 叫`value`
   > 		2. 将`__init__(self, value)`中的`value`传给`self`的新属性`value`
-  >																
+  >																	
   > 	+ 因为`self`是实例对象本身, 所以可以有这样的用法:
-  >																
+  >																	
   > 		```python
   > 		class aSample(object):
   > 		    def __init__(self, value):
   > 		        self.value = value;
-  > 																		
+  > 																			
   > 		    def add(self):
   > 		        if self.value == 5:
   > 		            return self;
   > 		        self.value += 1;
   > 		        print("The value is:", self.value);
   > 		        self.add();  # 递归
-  > 																		
+  > 																			
   > 		a = aSample(0);
   > 		print(a)
   > 		a.add();
   > 		print(a.add())
-  > 																		
+  > 																			
   > 		"""
   > 		Res:
   > 		    <__main__.aSample object at 0x0000023BFF779FD0>
@@ -1416,44 +1416,44 @@ Res:
   > 		    <__main__.aSample object at 0x0000023BFF779FD0>
   > 		"""
   > 		```
-  >																
+  >																	
   > 		这里需要注意的点有几个:
-  >																
+  >																	
   > 		1. `self.add();` -> 这里是递归的用法, 我们要注意的是, `self`如果是一个容器, 那么一个容器怎么可以调用`add()`方法呢?, 所以这也印证了`self`是实例化对象本身的事实.
-  >																
+  >																	
   > 		2. 递归说白了就是自己调用自己, 极有可能发生死循环, 那么为了避免死循环的情况, 我们需要加一个停止的条件.
-  >																
+  >																	
   > 			对于`while(true) \ while(1)`来说, `break`可以使循环停止, 但对于一个函数而言, 使用`break`是不符合语法规则的, 所以我们想到了`return`.
-  >																
+  >																	
   > 			考虑到递归的特性, 一般**把停止条件放到递归开始之前**
-  >																
+  >																	
   > 		3. 我们需要注意到, 在`add(self)`函数中,
-  >																
+  >																	
   > 			```python
   > 			def add(self):
   > 			    if self.value == 5:
   > 			        return self;
   > 			```
-  >																
+  >																	
   > 			`return self;`是为了使递归停止, 其实直接`return`就可以, 不加东西, 默认`return None`, 但是加了`return self`就表示把实例化对象return了, 接收变量也会变成`实例化对象`, 我们用下面的例子来说明:
-  >																
+  >																	
   > 			```python
   > 			class aSample(object):
   > 			    def __init__(self, value):
   > 			        self.value = value;
-  > 																			
+  > 																				
   > 			    def add(self):
   > 			        self.value += 1;
   > 			        return self;  # 这里的return可以把接收的变量变为实例化对象(和原本的实例化对象完全一样, 地址也是一样的, 只不过变量名不一样罢了)
-  > 																			
+  > 																				
   > 			a = aSample(1);
   > 			print(a)  # <__main__.aSample object at 0x0000017EFBBC9FD0>
   > 			print(a.value)  # 1
-  > 																			
+  > 																				
   > 			result = a.add()  # 因为add()中有return self, 所以接收变量result也会成为实例化对象(和原本的实例化对象完全一样, 地址也是一样的, 只不过变量名不一样罢了)
   > 			print(result)  # <__main__.aSample object at 0x0000017EFBBC9FD0>
   > 			print(result.value)  # 2
-  > 																			
+  > 																				
   > 			print(a is result)  # true
   > 			```
 
@@ -2028,7 +2028,7 @@ Res:
 > 	print(b)
 > 	print(b.shape)
 > 	print(b.ndim)
-> 																
+> 																	
 > 	"""
 > 	Res:
 > 	    [1 2 3]
@@ -2135,17 +2135,17 @@ Res:
 > 	print("min of array axis=1:", a.min(axis=1))
 > 	print("min of array axis=2:", a.min(axis=2))
 > 	# print("min of array axis=3:", a.min(axis=3)) -> 报错!
-> 																
+> 																	
 > 	"""
 > 	Res:
 > 	    [[[1 2 3]
 > 	      [3 2 1]
 > 	      [2 3 3]]
-> 																
+> 																	
 > 	     [[4 5 7]
 > 	      [7 5 4]
 > 	      [4 1 2]]
-> 																
+> 																	
 > 	     [[7 8 9]
 > 	      [9 8 7]
 > 	      [8 6 4]]]
@@ -2167,14 +2167,14 @@ Res:
 > 	          7 print("min of array axis=2:", a.min(axis=2))
 > 	    ----> 8 print("min of array axis=2:", a.min(axis=3))
 > 	          9 # print("min of array axis=3:", a.min(axis=3)) -> 报错!
-> 																
+> 																	
 > 	    C:\ProgramData\Anaconda3\envs\torch\lib\site-packages\numpy\core\_methods.py in _amin(a, axis, out, keepdims, initial, where)
 > 	         41 def _amin(a, axis=None, out=None, keepdims=False,
 > 	         42           initial=_NoValue, where=True):
 > 	    ---> 43     return umr_minimum(a, axis, None, out, keepdims, initial, where)
 > 	         44 
 > 	         45 def _sum(a, axis=None, dtype=None, out=None, keepdims=False,
-> 																
+> 																	
 > 	    AxisError: axis 3 is out of bounds for array of dimension 3
 > 	"""
 > 	```
@@ -2227,7 +2227,7 @@ Res:
 	>
 	> ​		当 $μ = 0,σ = 1$ 时的正态分布是标准正态分布。
 	>
-	> ![img](深度学习之PyTorch实战计算机视觉.assets/bba1cd11728b4710482c03aec8cec3fdfc032355)
+	> ![img](images/bba1cd11728b4710482c03aec8cec3fdfc032355)
 
 4. `randint(low, high)`∶在给定的范围内生成类型为`int`的随机样本数。
 
@@ -2235,13 +2235,13 @@ Res:
 
 	> ​		在 $n$ 次独立重复的伯努利试验中，设每次试验中事件 $A$ 发生的概率为 $p$ 。用 $X$ 表示 $n$ 重伯努利试验中事件 $A$发生的次数，则 $X$ 的可能取值为 $0，1，…，n$,且对每一个 $ k（0≤k≤n）$ ,事件 ${X=k}$ 即为“ $n$ 次试验中事件 $A$ 恰好发生 $ k$ 次”，随机变量 $X$ 的离散概率分布即为二项分布（Binomial Distribution）。 
 	>
-	> <img src="深度学习之PyTorch实战计算机视觉.assets/d043ad4bd11373f08202a38d78475cfbfbedab64aec2" alt="img" style="zoom: 50%;" />
+	> <img src="images/d043ad4bd11373f08202a38d78475cfbfbedab64aec2" alt="img" style="zoom: 50%;" />
 
 6. `beta(dim1, dim2, ...) `∶生成一个指定维度且满足beta分布的随机样本数。
 
 	> ​		贝塔分布（Beta Distribution) 是一个作为伯努利分布和二项式分布的共轭先验分布的密度函数，在机器学习和数理统计学中有重要应用。在概率论中，贝塔分布，也称Β分布，是指一组定义在 $(0,1) $ 区间的连续概率分布。
 	>
-	> ![img](深度学习之PyTorch实战计算机视觉.assets/b90e7bec54e736d1a6714f2f99504fc2d56269b3)
+	> ![img](images/b90e7bec54e736d1a6714f2f99504fc2d56269b3)
 
 7. `normal(dim1, dim2, ...)` ∶ 生成一个指定维度且满足高斯正太分布的随机样本数。
 
@@ -2415,7 +2415,7 @@ x = np.random.randn(30)
 plt.plot(x, "r--o")
 ```
 
-![image-20210530121156552](深度学习之PyTorch实战计算机视觉.assets/image-20210530121156552-1622347919584.png)
+![image-20210530121156552](images/image-20210530121156552-1622347919584.png)
 
 + 以上代码的前三行用于导入我们需要的包，并让通过 Matplotlib绘制的图像直接在Notebook文件中显示
 
@@ -2449,7 +2449,7 @@ plt.plot(x, "r--o")
 	> plt.plot(x, "g-v")
 	> ```
 	>
-	> <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530122020086.png" alt="image-20210530122020086" style="zoom:67%;" />
+	> <img src="images/image-20210530122020086.png" alt="image-20210530122020086" style="zoom:67%;" />
 	>
 	> 下面有更详细的讲解
 
@@ -2499,7 +2499,7 @@ plt.plot(x, "r--o")
 	9. `'>'` 右三角标记
 	10. `'<'` 左三角标记
 
-	<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530124047211.png" alt="image-20210530124047211" style="zoom:67%;" />
+	<img src="images/image-20210530124047211.png" alt="image-20210530124047211" style="zoom:67%;" />
 
 + 用于设置线型图中==连接参数点线条形状==的常用参数如下: 
 
@@ -2517,7 +2517,7 @@ plt.plot(x, "r--o")
 		>
 		> + `" "`中间有一个空格
 
-	![image-20210530124805356](深度学习之PyTorch实战计算机视觉.assets/image-20210530124805356.png)
+	![image-20210530124805356](images/image-20210530124805356.png)
 
 下面来看一个使用不同的线条颜色、形状和标记参数点形状的实例:
 
@@ -2529,7 +2529,7 @@ d = np.random.randn(30)
 plt.plot(a, "r--o", b, "b-*", c, "g-.+", d, "m:x")
 ```
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530145329263.png" alt="image-20210530145329263" style="zoom:67%;" />
+<img src="images/image-20210530145329263.png" alt="image-20210530145329263" style="zoom:67%;" />
 
 以上代码和之前代码的不同是没有使用随机种子，这样做是为了让最后得到的结果有更大的差异性，在绘制的图中对比更明显。
 
@@ -2552,13 +2552,13 @@ Y, = plt.plot(y, "b-*")
 plt.legend([X, Y], ["X-Function", "Y-Function"])
 ```
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530150017318.png" alt="image-20210530150017318" style="zoom:67%;" />
+<img src="images/image-20210530150017318.png" alt="image-20210530150017318" style="zoom:67%;" />
 
 我们在上图中看到了**图标签**和**图例**，这是因为在以上代码中增加了标签的显示代码`plt.xlabel("Y")`、`plt.ylabel("Y")`和图例的显示代码 `plt.legend([X, Y], ["X", "Y"])`，传递给`plt.legend`的是两个列表参数，第1个列表参数是在图中实际使用的标记和线形，第2个列表参数是对应图例的文字描述。
 
 > 介绍的不够全面和透彻, 所以我们自己来进行实验, 总结规律:
 >
-> <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530150536351.png" alt="image-20210530150536351" style="zoom:80%;" />
+> <img src="images/image-20210530150536351.png" alt="image-20210530150536351" style="zoom:80%;" />
 >
 > 我们发现了什么?
 >
@@ -2570,7 +2570,7 @@ plt.legend([X, Y], ["X-Function", "Y-Function"])
 >
 > ​		`plt.legend()`函数是这样的: 
 >
-> <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530151006121.png" alt="image-20210530151006121" style="zoom:80%;" />
+> <img src="images/image-20210530151006121.png" alt="image-20210530151006121" style="zoom:80%;" />
 >
 > ​		是需要传参的, 它需要的参数就是句柄(Handle).
 >
@@ -2580,7 +2580,7 @@ plt.legend([X, Y], ["X-Function", "Y-Function"])
 >
 > ​		当然, 这句话也可以改为:
 >
-> <img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530151643684.png" alt="image-20210530151643684" style="zoom:80%;" />
+> <img src="images/image-20210530151643684.png" alt="image-20210530151643684" style="zoom:80%;" />
 >
 > 对于`plt.legend()`函数来说:
 >
@@ -2628,7 +2628,7 @@ D = ax4.plot(d, "m:x")[0]
 ax4.legend([D], ["D"])
 ```
 
-![image-20210530153844707](深度学习之PyTorch实战计算机视觉.assets/image-20210530153844707.png)
+![image-20210530153844707](images/image-20210530153844707.png)
 
 ```python
 a = np.random.randn(30)
@@ -2649,7 +2649,7 @@ D = ax4.plot(d, "m:x")[0]
 plt.legend([A, B, C, D], ["A", "B", "C", "D"])
 ```
 
-![image-20210530153903244](深度学习之PyTorch实战计算机视觉.assets/image-20210530153903244.png)
+![image-20210530153903244](images/image-20210530153903244.png)
 
 在绘制子图时，我们首先需要通过 `fig = plt.figure()`定义一个实例，然后通过`fig.add_subplot`方法向`fig`实例中添加我们需要的子图。
 
@@ -2679,7 +2679,7 @@ D = plt.plot(d)[0]
 plt.legend([A, B, C, D], ["A", "B", "C", "D"])
 ```
 
-![image-20210530154447695](深度学习之PyTorch实战计算机视觉.assets/image-20210530154447695.png)
+![image-20210530154447695](images/image-20210530154447695.png)
 
 除了绘制线型图，利用 Matplotlib强大的绘图库还能绘制散点图、直方图、饼图等常用的图形。
 
@@ -2703,7 +2703,7 @@ plt.legend(loc=1)  # 默认loc=0
 plt.show()
 ```
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530160057572.png" alt="image-20210530160057572" style="zoom:80%;" />
+<img src="images/image-20210530160057572.png" alt="image-20210530160057572" style="zoom:80%;" />
 
 绘制散点图的核心代码是`plt.scatter(x, y, c="r", marker="o", label="(X, Y)")`，其中有三个我们需要特别留意的参数:
 
@@ -2735,15 +2735,15 @@ plt.show()
 > 		# 其实这个规则对于plot也是一样的
 > 		x = [1, 2, 3, 4, 5]
 > 		y = [2, 4, 6, 8, 10]
-> 																														
+> 																																
 > 		plt.subplot(1, 2, 1)
 > 		plt.plot(x, y)
-> 																														
+> 																																
 > 		plt.subplot(1, 2, 2)
 > 		plt.scatter(x, y)
 > 		```
 >
-> 		<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530161314296.png" alt="image-20210530161314296" style="zoom:80%;" />
+> 		<img src="images/image-20210530161314296.png" alt="image-20210530161314296" style="zoom:80%;" />
 >
 > 		> 那可以写3个自变量吗?  
 > 		>
@@ -2753,15 +2753,15 @@ plt.show()
 > 		> 	x = [1, 2, 3, 4, 5]
 > 		> 	y = [2, 4, 6, 8, 10]
 > 		> 	z = [1, 3, 6, 9, 12]
-> 		> 															
+> 		> 																
 > 		> 	plt.subplot(1, 2, 1)
 > 		> 	plt.plot(x, y, z)
-> 		> 															
+> 		> 																
 > 		> 	plt.subplot(1, 2, 2)
 > 		> 	plt.scatter(x, y, z)
 > 		> 	```
 > 		>
-> 		> 	<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530161453971.png" alt="image-20210530161453971" style="zoom:80%;" />
+> 		> 	<img src="images/image-20210530161453971.png" alt="image-20210530161453971" style="zoom:80%;" />
 > 		>
 > 		> 	+ 对于`plot`来说: 这两个条线段明显和我们的认知不符, 暂时找不到什么规律
 > 		>
@@ -2782,7 +2782,7 @@ plt.xlabel("X")
 plt.ylabel("Y")
 ```
 
-![image-20210530161915796](深度学习之PyTorch实战计算机视觉.assets/image-20210530161915796.png)
+![image-20210530161915796](images/image-20210530161915796.png)
 
 绘制直方图的核心代码是`plt.hist(x, bins=20, color="r")`，其中`color`的功能和散点图(scatter)中的`c`是一样的，`bins`用于指定我们绘制的直方图条纹的数量。
 
@@ -2811,7 +2811,7 @@ plt.ylabel("Y")
 > plt.legend(loc=2)
 > ```
 >
-> ![image-20210530162635360](深度学习之PyTorch实战计算机视觉.assets/image-20210530162635360.png)
+> ![image-20210530162635360](images/image-20210530162635360.png)
 
 ## h. 饼图
 
@@ -2827,7 +2827,7 @@ plt.pie(sizes, explode=(0, 0, 0.1), labels=labels, autopct="%1.1f%%", startangle
 plt.axis('equal')
 ```
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530163001109.png" alt="image-20210530163001109" style="zoom:80%;" />
+<img src="images/image-20210530163001109.png" alt="image-20210530163001109" style="zoom:80%;" />
 
 绘 制 饼 图 的 核 心 代 码 为`plt.pie(sizes, explode=(0, 0, 0.1), labels=labels, autopct="%1.1f%%", startangle=90)`，其中:
 
@@ -2846,44 +2846,44 @@ plt.axis('equal')
 > 		```python
 > 		labels = ["Dos", "Windows", "MacOS", "Others", "addtion"]
 > 		sizes = [5, 70, 25, 10, 33]
-> 																
+> 																	
 > 		plt.pie(sizes, explode=(0, 0, 0.1, 0, 0), labels=labels, autopct="%1.1f%%", startangle=90)
 > 		plt.axis('equal')
 > 		```
 >
-> 		<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530164047594.png" alt="image-20210530164047594" style="zoom:67%;" />
+> 		<img src="images/image-20210530164047594.png" alt="image-20210530164047594" style="zoom:67%;" />
 >
 > + `explode`
 >
 > 	+ ```python
 > 		labels = ["Dos", "Windows", "MacOS"]
 > 		sizes = [5, 70, 25]
-> 																
+> 																	
 > 		plt.pie(sizes, explode=(0, 0, 0), labels=labels, autopct="%1.1f%%", startangle=90)
 > 		plt.axis('equal')
 > 		```
 >
-> 		<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530163400959.png" alt="image-20210530163400959" style="zoom: 67%;" />
+> 		<img src="images/image-20210530163400959.png" alt="image-20210530163400959" style="zoom: 67%;" />
 >
 > 	+ ```python
 > 		labels = ["Dos", "Windows", "MacOS"]
 > 		sizes = [5, 70, 25]
-> 																
+> 																	
 > 		plt.pie(sizes, explode=(0, 0, 1), labels=labels, autopct="%1.1f%%", startangle=90)
 > 		plt.axis('equal')
 > 		```
 >
-> 		<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530163429435.png" alt="image-20210530163429435" style="zoom:67%;" />
+> 		<img src="images/image-20210530163429435.png" alt="image-20210530163429435" style="zoom:67%;" />
 >
 > 	+ ```python
 > 		labels = ["Dos", "Windows", "MacOS"]
 > 		sizes = [5, 70, 25]
-> 																
+> 																	
 > 		plt.pie(sizes, explode=(1, 1, 1), labels=labels, autopct="%1.1f%%", startangle=90)
 > 		plt.axis('equal')
 > 		```
 >
-> 		<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210530163458586.png" alt="image-20210530163458586" style="zoom:67%;" />
+> 		<img src="images/image-20210530163458586.png" alt="image-20210530163458586" style="zoom:67%;" />
 >
 > 		explode	英[`ɪkˈspləʊd`]	美[`ɪkˈsploʊd`]	v.	爆炸; 爆破; 爆裂; 勃然(大怒); 大发(雷霆); 突然发生(危险); 突然爆发，迸发(感情);
 >
@@ -4628,7 +4628,7 @@ plt.show()  # 切记不要忘了!
 
 效果如下图所示，可以看到，打印输出的首先是`64`张图片对应的标签，然后是`64`张图片的预览结果。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210531210335272.png" alt="image-20210531210335272" style="zoom:80%;" />
+<img src="images/image-20210531210335272.png" alt="image-20210531210335272" style="zoom:80%;" />
 
 ## d. 模型搭建和参数优化
 
@@ -4717,7 +4717,7 @@ class Model(torch.nn.Module):
 
 	下图显示了 Dropout方法的效果:
 
-	<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210531213333095-1622468014919.png" alt="image-20210531213333095" style="zoom:67%;" />
+	<img src="images/image-20210531213333095-1622468014919.png" alt="image-20210531213333095" style="zoom:67%;" />
 
 在上图中**打叉(X)的神经节点**就是被随机抽中并丢弃的神经连接，正是因为选取方式的随机性，所以**在模型的每轮训练中选择丢弃的神经连接也是不同的**，这样做是为了让我们最后<font color='red'>训练出来的模型对各部分的权重参数不产生过度依赖，从而防止过拟合</font>。
 
@@ -5109,7 +5109,7 @@ Real Label is: [9, 1, 6, 8]
 
 在输出结果中，第`1`个结果是我们训练好的模型的预测值，第`2`个结果是这`4`个测试数据的真实值。对测试数据进行可视化，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210601095057788.png" alt="image-20210601095057788" style="zoom:80%;" />
+<img src="images/image-20210601095057788.png" alt="image-20210601095057788" style="zoom:80%;" />
 
 可以看到，在上图中可视化的这部分测试集图片，模型的预测结果和真实的结果是完全一致的。当然，如果想选取更多的测试集进行可视化，则只需将`batch_size`的值设置得更大。
 
@@ -5298,7 +5298,7 @@ Res:
 """
 ```
 
-![image-20210601122329229](深度学习之PyTorch实战计算机视觉.assets/image-20210601122329229.png)
+![image-20210601122329229](images/image-20210601122329229.png)
 
 ## d. 模型搭建和参数优化
 
@@ -7166,7 +7166,7 @@ for epoch in range(epoch_n):
 
 其实在现实生活中有很多人都在使用与图像风格迁移技术相关的 App，比如在一些 App 中，我们可以选择一张自己喜欢的照片，然后与—些其他风格的图片进行融合，将我们原始照片的风格进行转变，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210604085111052-1622767872453.png" alt="image-20210604085111052" style="zoom:67%;" />
+<img src="images/image-20210604085111052-1622767872453.png" alt="image-20210604085111052" style="zoom:67%;" />
 
 总的来说，图像风格迁移算法的**实现逻辑并不复杂**:
 
@@ -7448,7 +7448,7 @@ Epoch:800 Style Loss:0.075613 Content Loss:1.065970
 
 可以看到，风格和内容损失已经降到了一个比较低的值了，这时对风格迁移的图片进行输出，如下图所示。
 
-![image-20210605160912047](深度学习之PyTorch实战计算机视觉.assets/image-20210605160912047.png)
+![image-20210605160912047](images/image-20210605160912047.png)
 
 输出的图片无论是在颜色的基调上还是在图像的轮廓上，都和风格图片极为相似，但是整个图像的内容仍然没有发生太大的变化。
 
@@ -7657,7 +7657,7 @@ plt.show()
 
 > `vgg`和`vgg.features`的区别:
 >
-> ![image-20210605152337858](深度学习之PyTorch实战计算机视觉.assets/image-20210605152337858.png)
+> ![image-20210605152337858](images/image-20210605152337858.png)
 >
 > 我们可以很明显的区分二者的关系:
 >
@@ -7759,7 +7759,7 @@ plt.show()
 
 **结果直接平均**追求的是<font color="red">融合各个模型的平均预测水平，以提升模型整体的预测能力</font>，但是与结果多数表决相比，结果直接平均**不强调个别模型的突出优势，却可以弥补个别模型的明显劣势**，<font color="red">比如在参与融合的模型中有一个模型已经发生了**过拟合**的问题，另一个模型却发生了**欠拟合**的问题，但是通过结果直接平均的方法能够**很好地综合这两个模型的劣势**，最后可**预防融合模型过拟合和欠拟合的发生**</font>，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210607102638992.png" alt="image-20210607102638992" style="zoom: 50%;" />
+<img src="images/image-20210607102638992.png" alt="image-20210607102638992" style="zoom: 50%;" />
 
 假设在图左中两个模型处理的是同一个分类问题，圆圈(<font size=10>**.**</font>)和叉号(<font size = 4>**X**</font>)代表不同的类别，则两个模型在泛化能力上的表现都不尽如人意，—个模型出现了**严重的过拟合**现象，另一个模型出现了**严重的欠拟合**现象.
 
@@ -8307,7 +8307,7 @@ for epoch in range(epoch_n):
 
 如下图所示就是这两种模式(CNN & RNN)之间的一个简单对比。
 
-![image-20210607174000603](深度学习之PyTorch实战计算机视觉.assets/image-20210607174000603.png)
+![image-20210607174000603](images/image-20210607174000603.png)
 
 在上图中一共绘制了 4 种类型的网络结构，分别是
 
@@ -8322,17 +8322,17 @@ for epoch in range(epoch_n):
 
 下面我们进一步对循环神经网络进行了解，如下图所示是循环神经网络的网络**简化模型**。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210607174329444.png" alt="image-20210607174329444" style="zoom:67%;" />
+<img src="images/image-20210607174329444.png" alt="image-20210607174329444" style="zoom:67%;" />
 
 上图中的 $X$ 是整个模型的输入层，RNN代表循环神经网络中的循环层（Recurrent Layers），$Y$ 是整个模型的输出层。上图用最简单的方式诠释了循环神经网络(RNN)中的循环过程，<font color="red">通过不断地**对自身的网络结构进行复制**来构造不同的循环神经网络模型</font>。 下图是对上图的展开，这样我们能够更明白它的工作流程。
 
-![image-20210607174511688](深度学习之PyTorch实战计算机视觉.assets/image-20210607174511688.png)
+![image-20210607174511688](images/image-20210607174511688.png)
 
 上图的结构其实是循环神经网络中的**多对多类型**，其中，从 $X_1$ 到 $X_n$ 代表模型的输入层，从 $Y_1$ 到 $Y_n$。代表模型的输出层，$H_0$ 是最初输入的隐藏层，在**一般情况下该隐藏层使用的是零初始化**(<font color='red'>即它的全部参数都是零</font>).
 
 下图展示了上图中RNN所代表的循环层内部的运算细节。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210607174759000.png" alt="image-20210607174759000" style="zoom:80%;" />
+<img src="images/image-20210607174759000.png" alt="image-20210607174759000" style="zoom:80%;" />
 
 上图中的虚线部分是循环层中的内容，假设我们截取的是一个循环神经网络中的第 $t+1$ 个循环单元，$W$ 表示权重参数，而 $tanh$ 是使用的激活函数，则根据上图的运算流程可以得到一个计算公式，公式如下∶
 $$
@@ -8594,7 +8594,7 @@ Real Label is:
 
 通过Matplotlib对测试用到的图片进行绘制，效果如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210607205750275.png" alt="image-20210607205750275" style="zoom:67%;" />
+<img src="images/image-20210607205750275.png" alt="image-20210607205750275" style="zoom:67%;" />
 
 从最后的输出结果和图片可以看出，错误率已经非常低了，这说明我们搭建的循环神经网络模型已经能够很好地解决图片分类的问题了。
 
@@ -8825,7 +8825,7 @@ plt.show()
 
 如图下图所示就是一个简化的自动编码器模型，它的主要结构是神经网络，该模型的最左边是用于数据输入的输入层，在输入数据通过神经网络的层层传递之后得到了中间输入数据的**核心特征**，这就完成了在自编码器中输入数据的编码过程。然后，将输入数据的核心特征再传递到一个**逆向的神经网络**中，核心特征会被解压并重构，最后得到了一个**和输入数据相近**的输出数据，这就是自动编码器中的解码过程。输入数据通过自动编码器模型的处理后又被重新还原了。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608090300602.png" alt="image-20210608090300602" style="zoom:67%;" />
+<img src="images/image-20210608090300602.png" alt="image-20210608090300602" style="zoom:67%;" />
 
 我们会好奇自动编码器模型这种**先编码后解码的神经网络模型**到底有什么作用，下面进行讲解。 
 
@@ -8950,19 +8950,19 @@ if __name__ == "__main__":
 >
 > 	```python
 > 	import numpy as np
-> 					
+> 						
 > 	list = [1, 2, 3]
 > 	print("list:", list)
 > 	print("type(list):", type(list))
 > 	print("*list:", *list)
-> 					
+> 						
 > 	print("-" * 50)
-> 					
+> 						
 > 	tuple = (1, 2, 3)
 > 	print("tuple:", tuple)
 > 	print("type(tuple):", type(tuple))
 > 	print("*tuple:", *tuple)
-> 					
+> 						
 > 	"""
 > 	Res:
 > 	    list: [1, 2, 3]
@@ -8989,7 +8989,7 @@ if __name__ == "__main__":
 > 	
 > 	tuple = (1, 2, 3)
 > 	print("type(*tuple):", type(*tuple))
-> 					
+> 						
 > 	"""
 > 	Res:
 > 	    Traceback (most recent call last):
@@ -8998,27 +8998,27 @@ if __name__ == "__main__":
 > 	    TypeError: type.__new__() argument 1 must be str, not int
 > 	"""
 > 	```
->				
+>					
 > 	那么 `1 2 3` 这种诡异的形式放到`np.random.randn()`中会怎么样?
->				
+>					
 > 	是分批放入, 还是一起放入?
->				
+>					
 > 	我们做一个验证就可以知道了:
->				
+>					
 > 	```python
 > 	import numpy as np
-> 					
+> 						
 > 	a = (1, 2, 3)
 > 	np.random.seed(42)
 > 	A = np.random.randn(*a)
 > 	np.random.seed(42)
 > 	B = np.random.randn(1, 2, 3)
-> 					
+> 						
 > 	print("A:")
 > 	print(A)
 > 	print("B:")
 > 	print(B)
-> 					
+> 						
 > 	"""
 > 	Res:
 > 	    A:
@@ -9030,7 +9030,7 @@ if __name__ == "__main__":
 > 	"""
 > 	```
 > 	答案很清晰了!
->				
+>					
 > 	+ `(1, 2, 3)`这个Tuple被拆成了 `1 2 3`. 是按照 `1, 2, 3`这样的样子放进`np.random.randn()`当中的, 即:
 > 		`np.random.randn(*(1, 2, 3))` <=> `np.random.randn(1, 2, 3)`
 >
@@ -9061,11 +9061,11 @@ if __name__ == "__main__":
 
 假设我们原始的输入图片如图下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608174756461.png" alt="image-20210608174756461" style="zoom:67%;" />
+<img src="images/image-20210608174756461.png" alt="image-20210608174756461" style="zoom:67%;" />
 
 则经过我们的打码处理后，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608174808053.png" alt="image-20210608174808053" style="zoom:67%;" />
+<img src="images/image-20210608174808053.png" alt="image-20210608174808053" style="zoom:67%;" />
 
 我们现在已经有了获取大量马赛克图片的方法，下面就可以搭建自动编码器模型了。搭建自动编码器模型最常用的两种方式分别是: 
 
@@ -9354,15 +9354,15 @@ Loss is: 0.0194
 
 在运行代码后，我们得到的第 1 张输出图片绘制了我们使用的测试集中原始照片:
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608211547298.png" alt="image-20210608211547298" style="zoom:67%;" />
+<img src="images/image-20210608211547298.png" alt="image-20210608211547298" style="zoom:67%;" />
 
 输出的第 2 张图片绘制了经过打码后的效果:
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608211557464.png" alt="image-20210608211557464" style="zoom:67%;" />
+<img src="images/image-20210608211557464.png" alt="image-20210608211557464" style="zoom:67%;" />
 
 输出的第 3 张打码图片经过我们训练好的自动编码器模型处理后的效果:
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608211606071.png" alt="image-20210608211606071" style="zoom:67%;" />
+<img src="images/image-20210608211606071.png" alt="image-20210608211606071" style="zoom:67%;" />
 
 可以看到，最后的输出结果虽然有些模糊，但是已经基本达到了和原始图片同等水平的可辨度，而且图片中的乱码基本被清除了。
 
@@ -9604,7 +9604,7 @@ class AutoEncoder(torch.nn.Module):
 
 因为在我们的代码中使用的是**最邻近法**，所以这里通过一张图片来看一下最邻近法的具体工作方式，如下图所示。
 
-<img src="深度学习之PyTorch实战计算机视觉.assets/image-20210608213532959.png" alt="image-20210608213532959" style="zoom: 50%;" />
+<img src="images/image-20210608213532959.png" alt="image-20210608213532959" style="zoom: 50%;" />
 
 在模型搭建完成后对其进行打印输出，结果如下∶
 
