@@ -10,7 +10,7 @@
 
 + 按下`shift + →`
 
-![在这里插入图片描述](./Shortcut Key in Windows and PyCharm.assets/20210626164242557-1624769882379.gif)
+![](../Shortcut Key in Windows and PyCharm.assets/20210626164242557-1624769882379.gif)
 
 + `Shift + 鼠标左键`也可以实现一样的功能
 ![在这里插入图片描述](Shortcut Key in Windows and PyCharm.assets/20210626164459725-1624769887058.gif)
