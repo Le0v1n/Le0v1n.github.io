@@ -6,7 +6,7 @@
 
 --------
 
-By the way, I'm not the author of this book, and I'll read this book as well as add some my own understanding.
+By the way, I'm not the author of this book, and I just read this book as well as add some my own understanding.
 
 All in all, I did not profit from this project, and I put this project in the repository just for backup purposes.
 
